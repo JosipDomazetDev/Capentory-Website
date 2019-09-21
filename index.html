@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Landing &mdash; Free One Page Bootstrap 4 Template by uicookies.com</title>
+    <title>Capentory</title>
     <meta name="description" content="Free Bootstrap 4 Template by uicookies.com">
     <meta name="keywords"
           content="Free website templates, Free bootstrap themes, Free template, Free bootstrap, Free website template">
 
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400"
-          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400">
 
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="assets/fonts/ionicons/css/ionicons.min.css">
@@ -31,22 +31,23 @@
 
         }
 
+        .zebra-btn {
+            /* background: repeating-linear-gradient(
+                     45deg,
+                     #007bff,
+                     #007bff 1px,
+                     #0061c9 1px,
+                     #0061c9 15px
+             )*/
+        }
 
         #section-home:before {
-            background-image: url("assets/images/content/try.png") !important;
+            background-image: linear-gradient(45deg,
+            rgba(15, 130, 192, 0.60) 0%,
+            rgba(15, 130, 192, 0.70) 100%), url("assets/images/content/try.png") !important;
             background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
-        }
-
-        .gradient {
-            background: linear-gradient(45deg, rgba(15, 130, 192, 0.60) 0%, rgba(15, 130, 192, 0.70) 100%);
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            box-sizing: inherit;
-            position: relative;
         }
 
         .button {
@@ -96,6 +97,21 @@
             margin-top: 20px !important;
         }
 
+        .subber {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        @media (max-width: 992px) {
+            #solution-header {
+                text-align: center !important;
+            }
+
+            .subber {
+                text-align: center !important;
+            }
+        }
+
 
     </style>
 </head>
@@ -112,40 +128,38 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="#section-idea">Worum gehts?</a></li>
                 <li class="nav-item"><a class="nav-link" href="#section-team">Das Team</a></li>
-                <li class="nav-item"><a class="nav-link" href="#section-app">Die App</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-app">Unsere Lösung</a></li>
                 <li class="nav-item"><a class="nav-link" href="#section-downloads">Downloads</a></li>
-                <li class="nav-item"><a class="nav-link" href="#section-sponsoren">Sponsoren</a></li>
-                <li class="nav-item"><a class="nav-link" href="#section-contact">Kontakt</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-sponsoren">Sponsor</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-impressum">Kontakt</a></li>
             </ul>
         </div>
 
     </div>
 </nav>
-<!-- END nav -->
 
 
 <section class="pb_cover_v3 overflow-hidden cover-bg-indigo cover-bg-opacity text-left pb_gradient_v1 pb_slant-light"
-         id="section-home">
-    <div class="pb_cover_v3 overflow-hidden gradient" id="bg">
+         id="section-home" style="border: 1px solid red;">
+    <div class="pb_cover_v3 overflow-hidden" id="bg">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-6">
                     <h2 class="heading mb-3 font-weight-bold">Capentory</h2>
-                    <div class="sub-heading">
-                        <p class="mb-4 center-block">Schulinventur leicht gemacht</p>
+                    <div class="subber">
+                        <p class="mb-4">Schulinventur leicht gemacht</p>
                     </div>
                 </div>
-                <a href="#section-idea" class="button smoothscrool btn smoothscroll">Los gehts!</a>
+                <a href="#section-idea" class="button btn smoothscroll">Los gehts!</a>
                 <div class="col-md-1">
                 </div>
 
             </div>
+
+
         </div>
     </div>
 </section>
-
-
-<!-- END section -->
 
 
 <section class="pb_section bg-light pb_slant-white pb_pb-250" id="section-idea">
@@ -179,13 +193,13 @@
         </div>
     </div>
     <a href="#section-team" title="Go to Teams"
-       class="center-block triangleDown smoothscrool smoothscroll"></a>
+       class="center-block triangleDown smoothscroll"></a>
 </section>
 
 
-<section class="pb_section pb_slant-light" id="section-team">
+<section class="pb_section pb_slant-light pb_pb-250" id="section-team">
     <div class="container">
-        <div class="row justify-content-center mb-5">
+        <div class="row justify-content-center mb-2">
             <div class="row text-center">
                 <div class="col">
                     <h5 class="text-uppercase pb_font-15 mb-2 pb_color-dark-opacity-3 pb_letter-spacing-2"><strong>Das
@@ -195,11 +209,11 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md text-center mb-1 mt-5">
-                    <img class="img-fluid rounded-circle" src="assets/images/pics/m.jpg"
+                    <img class="rounded-circle img-fluid" src="assets/images/pics/m.jpg"
                          alt="Mathias"><br>
                     <div>
-                        <h3 class="mt-2 mb-2 heading mt-5">Mathias Möller</h3>
-                        <p class="text-sans-serif pb_font-16">
+                        <h3 class="mt-2 mb-2 heading mt-4">Mathias Möller</h3>
+                        <p class=" pb_font-16 text-sans-serif">
                             Projektleiter Stv.
                         </p>
                         <hr/>
@@ -210,12 +224,12 @@
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md text-center mb-1 mt-5">
-                    <img class="img-fluid rounded-circle" src="assets/images/pics/h.jpg"
+                    <img class="rounded-circle img-fluid" src="assets/images/pics/h.jpg"
                          alt="Hannes"><br>
 
                     <div>
-                        <h3 class="mt-2 mb-2 heading  mt-5">Hannes Weiss</h3>
-                        <p class="text-sans-serif pb_font-16">Projektmitarbeiter</p>
+                        <h3 class="mt-2 mb-2 heading  mt-4">Hannes Weiss</h3>
+                        <p class=" pb_font-16 text-sans-serif">Projektmitarbeiter</p>
                         <hr/>
                         Infrastrukturexperte
                         <hr/>
@@ -224,11 +238,11 @@
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md text-center mb-1 mt-5">
-                    <img class="img-fluid rounded-circle" src="assets/images/pics/j.jpg"
+                    <img class="rounded-circle img-fluid" src="assets/images/pics/j.jpg"
                          alt="Josip"><br>
                     <div>
-                        <h3 class="mt-2 mb-2 heading mt-5">Josip Domazet</h3>
-                        <p class="text-sans-serif pb_font-15">Projektleiter</p>
+                        <h3 class="mt-2 mb-2 heading mt-4">Josip Domazet</h3>
+                        <p class=" pb_font-16 text-sans-serif">Projektleiter</p>
                         <hr/>
                         Frontendexperte
                         <hr/>
@@ -240,7 +254,7 @@
             </div>
         </div>
         <a href="#section-app" title="Go to Teams"
-           class="center-block triangleDown smoothscrool smoothscroll"></a>
+           class="center-block triangleDown smoothscroll"></a>
     </div>
 
 
@@ -253,13 +267,12 @@
         <div class="row">
             <div class="col-lg-4 mb-5">
                 <img src="assets/images/content/le_galaxys4_white_portrait.png" alt="App"
-                     class="img-fluid"
-                >
+                     class="img-fluid">
             </div>
             <div class="col-lg-8 pl-md-5 pl-sm-0">
                 <div class="row">
-                    <div class="col">
-                        <h2>Die App</h2>
+                    <div class="col" id="solution-header">
+                        <h2>Unsere Lösung</h2>
                         <p class="pb_font-20">Rasant und sicher inventarisieren.</p>
                     </div>
                 </div>
@@ -319,7 +332,7 @@
         </div>
     </div>
     <a href="#section-downloads" title="Go to Teams"
-       class="center-block triangleDown smoothscrool smoothscroll"></a>
+       class="center-block triangleDown smoothscroll"></a>
 </section>
 
 
@@ -328,11 +341,11 @@
         <div class="row justify-content-center mb-5">
             <div class="col-md-6 text-center mb-5">
                 <h5 class="text-uppercase pb_font-15 mb-2 pb_color-dark-opacity-3 pb_letter-spacing-2">
-                    <strong>Was wir erreichen wollen</strong></h5>
+                    <strong>Downloads</strong></h5>
                 <h2>Die offizielen Projekthauptziele</h2>
             </div>
         </div>
-        <div class="row">
+        <div class="row pb-2">
             <div class="col-md">
                 <div id="pb_faq" class="pb_accordion" data-children=".item">
                     <div class="item">
@@ -499,17 +512,21 @@
                             <div class="py-3">
                                 <p>Planungsdokumente</p>
                                 <ul>
-                                    <a href="assets/res/da_antrag_domazet.pdf" download>
-                                        <p>Diplomarbeitsantrag</p>
-                                    </a>
+                                    <li>
+                                        <a href="assets/res/da_antrag_domazet.pdf" download>
+                                            <p>Diplomarbeitsantrag</p>
+                                        </a></li>
                                 </ul>
 
 
                                 <p>Statusberichte</p>
                                 <ul>
-                                    <a href="assets/images/content/le_galaxys4_white_portrait.png" download="x.png">
-                                        <p>3322-42-24Meeting</p>
-                                    </a>
+                                    <li><a href="assets/res/SB_31_07_2019_Juli.docx" download="x.png">
+                                        <p>Julibericht</p>
+                                    </a></li>
+                                    <li><a href="assets/res/SB_31_08_2019_August.docx" download="x.png">
+                                        <p>Augustbericht</p>
+                                    </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -518,105 +535,89 @@
             </div>
         </div>
     </div>
+    <a href="#section-sponsoren" title="Go to Sponsor"
+       class="center-block triangleDown mt-5 smoothscroll"></a>
 </section>
 
 
-<section class="pb_section pb_slant-light bg-light pb_pb-250" id="section-sponsoren">
-    <div class="container">
+<section class="pb_section pb_slant-light bg-light" id="section-sponsoren">
+    <div class="container mt-5">
         <div class="row justify-content-center mb-1">
             <div class="col-md-6 text-center mb-5">
                 <h5 class="text-uppercase pb_font-15 mb-2 pb_color-dark-opacity-3 pb_letter-spacing-2">
-                    <strong>Sponsoren</strong></h5>
-                <h2>Unsere Sponsoren</h2>
+                    <strong>Sponsor</strong></h5>
+                <h2>Unser Sponsor</h2>
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md text-center mb-1 mt-5">
+            <div class="col-md-6 text-center mb-1 mt-2">
                 <a href="https://www.zebra.com/de/de.html">
-                    <img class="img-fluid rounded-circle" src="assets/images/content/zebra_rounded.png"
+                    <img class="img-fluid" src="assets/images/content/zebra.png"
                          alt="Zebra Logo"></a><br>
-                <h3 class="mt-2 mb-2 heading  mb-1 mt-5">Zebra</h3>
-                <p class="text-sans-serif pb_font-16">
-                    Hardwaresponsor
-                </p>
-                <hr>
-                Zebra hat uns ein Gerät mit integriertem Barcode Scanner zur Verfügung gestellt.<br/> Damit ist das
-                Scannen
-                noch schneller!
-                <br><br>
-                <a class=" btn-lg btn btn-primary" href="https://www.zebra.com/de/de.html">Zu
-                    Zebra</a>
-                <p></p>
 
-            </div>
-        </div>
-    </div>
-</section>
+                <div class="mt-4">
+                    <hr/>
 
-
-<section class="pb_xl_py_cover overflow-hidden pb_slant-light pb_gradient_v1 cover-bg-opacity-8" id="section-contact"
-         style="background-image: url(assets/images/content/1900x1200_img_5.jpg)">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-md-5 justify-content-center">
-                <h2 class="heading mb-5 pb_font-40">Join over 1M+ people who uses Instant App</h2>
-                <div class="sub-heading">
-                    <p class="mb-4">New free template by <a href="http://uicookies.com"
-                                                            target="_blank">uicookies.com</a>. For more templates visit
-                        the <a href="http://uicookies.com" target="_blank">site</a>. Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit.</p>
+                    <p class="">
+                        Dank Zebras gesponsertem TC56 noch schneller scannen!</p>
                 </div>
+
             </div>
-            <div class="col-md-1"></div>
+
+        </div>
+        <div class="col-md-3 mx-auto pb-3">
+            <a class="zebra-btn btn-lg btn btn-primary mt-2 center-block" href="https://www.zebra.com/de/de.html">Zu
+                Zebra</a>
+        </div>
+
+    </div>
+
+    <a href="#section-impressum" title="Go to Impressum"
+       class="center-block triangleDown smoothscroll mx-auto"></a>
+</section>
+
+
+<section class="pb_xl_py_cover overflow-hidden pb_slant-light pb_gradient_v1 cover-bg-opacity-8"
+
+         id="section-impressum"
+         style="background-image: url(assets/images/content/1900x1200_img_5.jpg)">
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+
             <div class="col-md-5">
-                <form action="#" class="bg-white rounded pb_form_v1">
-                    <h2 class="mb-4 mt-0 text-center">Sign Up for Free</h2>
-                    <div class="form-group">
-                        <input type="text" class="form-control py-3 reverse" placeholder="Full name">
+                <h5 class="text-uppercase pb_font-15 pb_letter-spacing-2 pb_color-light-opacity-6">
+                    <strong>Kontakt</strong></h5>
+                <h2 class="heading pb_font-40">Impressum</h2>
+                <p class="text-white mt-2">Sie können uns gerne kontaktieren!</p>
+            </div>
+
+            <div>
+                <div class="">
+                    <div class="text-white">
+                        <p>Josip Domazet<br/>
+                            Rennweg 89b, 1030 Wien<br/>
+                            Österreich<br/><br/>
+                            capentory@htl.rennweg.at</p>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control py-3 reverse" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control py-3 reverse" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <div class="pb_select-wrap">
-                            <select class="form-control pb_height-50 reverse">
-                                <option value="" selected>Type</option>
-                                <option value="">Basic</option>
-                                <option value="">Business</option>
-                                <option value="">Free</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue"
-                               value="Register">
-                    </div>
-                </form>
+                </div>
+                <div class="col-md-1"></div>
             </div>
         </div>
+
     </div>
+
 </section>
-<!-- END section -->
 
 <footer class="pb_footer bg-light" role="contentinfo">
     <div class="container">
-        <div class="row text-center">
-            <div class="col">
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-facebook"></i></a></li>
-                    <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-twitter"></i></a></li>
-                    <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-        </div>
         <div class="row">
             <div class="col text-center">
                 <p class="pb_font-14">&copy; 2019. All Rights Reserved. <br> <a
                         href="https://uicookies.com/bootstrap-html-templates/">Bootstrap Templates</a> by uiCookies</p>
                 <p class="pb_font-14">Demo Images: <a href="https://unsplash.com/" target="_blank" rel="nofollow">Unsplash</a>
+                    <br/>Phone pictures: <a href="https://mockuphone.com/" target="_blank" rel="nofollow">Mockuphone</a>
                 </p>
             </div>
         </div>
@@ -626,23 +627,20 @@
 <!-- loader -->
 <div id="pb_loader" class="show fullscreen">
     <svg class="circular" width="48px" height="48px">
-        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle>
         <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-                stroke="#1d82ff"/>
+                stroke="#1d82ff"></circle>
     </svg>
 </div>
 
 
 <script src="assets/js/jquery.min.js"></script>
-
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/slick.min.js"></script>
 <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
-
 <script src="assets/js/jquery.waypoints.min.js"></script>
 <script src="assets/js/jquery.easing.1.3.js"></script>
-
 <script src="assets/js/main.js"></script>
 
 </body>
