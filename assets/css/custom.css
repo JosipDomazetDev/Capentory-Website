@@ -30,6 +30,14 @@
     background-attachment: fixed;
 }
 
+.no-webp #section-impressum{
+    background-image: url("../images/content/impressum_background.jpg");
+}
+
+.webp #section-impressum{
+    background-image: url("../images/content/impressum_background.webp");
+}
+
 .button {
     text-decoration: none !important;
     color: #FFF !important;
