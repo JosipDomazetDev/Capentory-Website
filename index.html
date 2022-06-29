@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,13 +9,11 @@
     <meta name="keywords"
           content="Capentory,Inventur,Inventory,HTL Rennweg,Diplomarbeit,Zebra,Ralph,Asset Management,Stocktacking">
 
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400">
+    <link rel="stylesheet" href="assets/css/montserrat.css">
+
 
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="assets/fonts/ionicons/css/ionicons.min.css">
-
-    <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
 
 
     <link rel="stylesheet" href="assets/css/slick.css">
@@ -99,11 +97,15 @@
             <div class="col-lg-6">
                 <div class="auto-resizable-iframe">
                     <div>
-                        <iframe src="https://www.youtube.com/embed/ktoLtNBN13E"
-                                frameborder="0"
+                        <iframe
+                                src="https://www.youtube.com/embed/ktoLtNBN13E&autoplay=1"
+                                srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/ktoLtNBN13E?autoplay=1><img src=https://img.youtube.com/vi/ktoLtNBN13E/hqdefault.jpg alt='Capentory – App Showcase'><span>▶</span></a>"
+                                style="border:0;"
                                 loading="lazy"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                                title="Capentory – App Showcase"
+                                allowfullscreen
+                        ></iframe>
                     </div>
                 </div>
             </div>
@@ -125,6 +127,7 @@
         </div>
         <a href="#section-team" title="Go to Teams"
            class="center-block triangleDown smoothscroll"></a>
+    </div>
 </section>
 
 
@@ -196,8 +199,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 mb-5">
-                <img src="assets/images/content/phone.png" alt="App"
-                     class="img-fluid">
+                <picture>
+                    <source srcset="assets/images/content/phone.webp" type="image/webp">
+                    <source srcset="assets/images/content/phone.jpg" type="image/jpeg">
+                    <img src="assets/images/content/phone.jpg" width="632"
+                         height="1252" alt="App"
+                         class="img-fluid"
+                         loading="lazy">
+                </picture>
             </div>
             <div class="col-lg-8 pl-md-5 pl-sm-0">
                 <div class="row">
@@ -495,7 +504,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6 text-center mb-1 mt-2">
                 <a href="https://www.zebra.com/de/de.html">
-                    <img class="img-fluid" src="assets/images/content/zebra.png"
+                    <img class="img-fluid" src="assets/images/content/zebra.svg"
                          alt="Zebra Logo"></a><br>
 
                 <div class="mt-4">
@@ -539,7 +548,7 @@
             <div>
                 <div class="">
                     <div class="text-white">
-                        <p><a href="https://josip.pro/" target="_blank">Josip Domazet</a><br/>
+                        <p><a href="https://josip.app/" target="_blank">Josip Domazet</a><br/>
                             Rennweg 89b, 1030 Wien<br/>
                             Österreich<br/><br/>
                             <a href="mailto:team@capentory.com" class="text-white" id="email">team@capentory.com</a>
@@ -552,7 +561,7 @@
     </div>
 </section>
 
-<footer class="pb_footer bg-light" role="contentinfo">
+<footer class="pb_footer bg-light">
     <div class="container">
         <div class="row">
             <div class="col text-center">
@@ -576,7 +585,7 @@
 </div>
 
 
-<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery-3.6.0.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/slick.min.js"></script>
