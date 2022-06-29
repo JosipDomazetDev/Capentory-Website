@@ -1,0 +1,67 @@
+name: Compress Website
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-20.04]
+    env:
+      prepo: ${{github.repository}}
+    steps:
+      - uses: actions/checkout@v2
+
+
+      - name: Creating branch
+      uses: peterjgrainger/action-create-branch@v2.2.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        branch: 'compressed-build'
+        sha: '${{ github.event.pull_request.head.sha }}'
+
+      - name: Removing unnecessary files
+        run: |
+          rm -r assets/scss
+          ls -la
+
+
+      - name: minify css
+        uses: nizarmah/auto-minify@v2.1
+        with:
+          overwrite: true
+          directory: 'assets/css'
+
+
+      - name: minify js
+        uses: nizarmah/auto-minify@v2.1
+        with:
+          overwrite: true
+          directory: 'assets/js/custom'
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      - run: npm ci
+      - run: npm test
+      - run: npm i -g purgecss
+      - run: purgecss --css assets\css\**\*.css --content index.html --output assets\css\**
+
+      - name: Pushing to production branch
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: compressed-build
+          message: Minified css, js and html
+          author_name: MinifyAction[bot]
+          author_email: amireshoon-minifyAction@users.noreply.github.com
+          force: true
