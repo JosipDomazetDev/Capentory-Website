@@ -35,15 +35,15 @@ jobs:
           node-version: 14
       - run: npm i -g purgecss
       - run: ls -ls
-      - run: ls -ls assets\css\bootstrap\
+      - run: ls -ls assets/css/bootstrap/
       - run: pwd
       - run: purgecss -h
-      - run: purgecss --css assets\css\*.css --content index.html assets\js\**\*.js --output assets\css\
-      - run: purgecss --css assets\css\bootstrap\*.css --content index.html assets\js\**\*.js --output assets\css\bootstrap\
-      - run: purgecss --css assets\css\bootstrap\mixins\*.css --content index.html assets\js\**\*.js --output assets\css\bootstrap\mixins
-      - run: purgecss --css assets\css\bootstrap\utilities\*.css --content index.html assets\js\**\*.js --output assets\css\bootstrap\utilities
-      - run: purgecss --css assets\css\components\*.css --content index.html assets\js\**\*.js --output assets\css\components\
-      - run: ls -ls assets\css\bootstrap\
+      - run: purgecss --css assets/css/*.css --content index.html assets/js/**/*.js --output assets/css/
+      - run: purgecss --css assets/css/bootstrap/*.css --content index.html assets/js/**/*.js --output assets/css/bootstrap/
+      - run: purgecss --css assets/css/bootstrap/mixins/*.css --content index.html assets/js/**/*.js --output assets/css/bootstrap/mixins
+      - run: purgecss --css assets/css/bootstrap/utilities/*.css --content index.html assets/js/**/*.js --output assets/css/bootstrap/utilities
+      - run: purgecss --css assets/css/components/*.css --content index.html assets/js/**/*.js --output assets/css/components/
+      - run: ls -ls assets/css/bootstrap/
       - name: minify css
         uses: nizarmah/auto-minify@v2.1
         with:
