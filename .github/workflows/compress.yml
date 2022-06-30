@@ -30,6 +30,11 @@ jobs:
         run: |
           rm -r assets/scss
           ls -la
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      - run: npm i -g purgecss
+      - run: purgecss --css assets\css\**\*.css --content index.html --output assets\css\**
       - name: minify css
         uses: nizarmah/auto-minify@v2.1
         with:
@@ -40,11 +45,6 @@ jobs:
         with:
           overwrite: true
           directory: 'assets/js/custom'
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14
-      - run: npm i -g purgecss
-      - run: purgecss --css assets\css\**\*.css --content index.html --output assets\css\**
       - name: Pushing to production branch
         uses: actions-js/push@master
         with:
