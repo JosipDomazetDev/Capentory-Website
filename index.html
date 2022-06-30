@@ -32,8 +32,17 @@
     <noscript>
         <link rel="stylesheet" href="assets/css/helpers.css">
     </noscript>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/landing-2.css">
+
+    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </noscript>
+
+    <link rel="preload" href="assets/css/landing-2.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/landing-2.css">
+    </noscript>
+
 
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/content/icon.png"/>
     <link href="assets/css/custom.css" rel="stylesheet"/>
