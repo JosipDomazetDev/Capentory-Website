@@ -30,11 +30,11 @@
     background-attachment: fixed;
 }
 
-.no-webp #section-impressum{
+.no-webp #section-impressum {
     background-image: url("../images/content/impressum_background.jpg");
 }
 
-.webp #section-impressum{
+.webp #section-impressum {
     background-image: url("../images/content/impressum_background.webp");
 }
 
@@ -139,4 +139,16 @@
 iframe {
     border-radius: 10px;
     margin-top: 6px;
+}
+
+.pb_footer p {
+    color: #0c0c0c;
+}
+
+footer a {
+    font-weight: bold;
+}
+
+a {
+    color: #0751a0;
 }
